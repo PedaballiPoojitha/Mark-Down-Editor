@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Markdown Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="toolbar">
+    <button onclick="addMarkdown('**', '**')"><b>B</b></button>
+    <button onclick="addMarkdown('_', '_')"><i>I</i></button>
+    <button onclick="addMarkdown('# ', '')">H1</button>
+    <button onclick="addMarkdown('## ', '')">H2</button>
+    <button onclick="addMarkdown('[', '](url)')">Link</button>
+    <button onclick="addMarkdown('`', '`')">Code</button>
+    <button id="theme-toggle">🌙 Theme</button>
+  </div>
+
+  <div class="editor-container">
+    <textarea id="markdown-input" placeholder="Type your markdown here..."></textarea>
+    <div id="preview"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
